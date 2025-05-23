@@ -1,6 +1,6 @@
 // Array para armazenar os contatos
 let contatos = [];
-
+// ariel raio
 // Função para adicionar um contato
 function adicionarContato(nome, telefone) {
     // Remove caracteres não numéricos para validação
