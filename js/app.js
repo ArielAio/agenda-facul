@@ -3,13 +3,23 @@ let contatos = [];
 
 // Função para adicionar um contato
 function adicionarContato(nome, telefone) {
+    // Remove caracteres não numéricos para validação
+    const telefoneNumeros = telefone.replace(/\D/g, "");
+
+    // Validação: telefone deve ter 10 ou 11 dígitos (DDD + número)
+    if (telefoneNumeros.length < 10 || telefoneNumeros.length > 11) {
+        alert("Número de telefone inválido! Use o formato (99) 99999-9999");
+        return;
+    }
+
+    // Adiciona o contato com o telefone já formatado
     const contato = { nome, telefone };
     contatos.push(contato);
     exibirContatos();
     salvarContatos(); // Salvar contatos no localStorage
 }
 
-// Função para exibir os contatos
+// Função para exibir os contatoss
 function exibirContatos() {
     const listaContatos = document.getElementById('lista-contatos');
     listaContatos.innerHTML = '';
@@ -90,6 +100,31 @@ function carregarContatos() {
     }
 }
 
+// Função para aplicar máscara de telefone (formatar enquanto digita)
+function mascaraTelefone(event) {
+    let input = event.target;
+    let valor = input.value;
+
+    // Remove tudo que não for número
+    valor = valor.replace(/\D/g, "");
+
+    if (valor.length > 10) {
+        // (99) 99999-9999
+        valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (valor.length > 5) {
+        // (99) 9999-9999
+        valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (valor.length > 2) {
+        // (99) 9999
+        valor = valor.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
+    } else if (valor.length > 0) {
+        // (99
+        valor = valor.replace(/^(\d{0,2})/, "($1");
+    }
+
+    input.value = valor;
+}
+
 // Inicialização e configuração de eventos
 document.addEventListener('DOMContentLoaded', function() {
     // Carregar contatos do localStorage
@@ -101,8 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Evento de submit do formulário
     document.getElementById('formulario-contato').addEventListener('submit', function(event) {
         event.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const telefone = document.getElementById('telefone').value;
+        const nome = document.getElementById('nome').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
         
         if (nome && telefone) {
             adicionarContato(nome, telefone);
@@ -113,4 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Evento de busca
     document.getElementById('busca').addEventListener('input', buscarContato);
+
+    // Evento para aplicar máscara no input telefone
+    document.getElementById('telefone').addEventListener('input', mascaraTelefone);
 });
