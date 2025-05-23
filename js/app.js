@@ -19,7 +19,7 @@ function adicionarContato(nome, telefone) {
     salvarContatos(); // Salvar contatos no localStorage
 }
 
-// Função para exibir os contatos
+// Função para exibir os contatoss
 function exibirContatos() {
     const listaContatos = document.getElementById('lista-contatos');
     listaContatos.innerHTML = '';
