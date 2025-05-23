@@ -6,14 +6,14 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #ffd5ff;
     padding: 20px;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #fdb5ff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@ body {
 
 header {
     background: #35424a;
-    color: #ffffff;
+    color: #ffd5ff;
     padding: 10px 0;
     text-align: center;
 }
@@ -39,7 +39,7 @@ h2 {
 }
 
 form {
-    background: #ffffff;
+    background: #ffd5ff;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
@@ -65,7 +65,7 @@ input[type="text"] {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #b123aa;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -75,16 +75,16 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #c90faa;
 }
 
 button.delete {
-    background-color: #f44336;
+    background-color: #a047d3;
     margin-left: 10px;
 }
 
 button.delete:hover {
-    background-color: #d32f2f;
+    background-color: #5e18a0;
 }
 
 .contact-list {
@@ -93,7 +93,7 @@ button.delete:hover {
 }
 
 .contact-list li {
-    background: #ffffff;
+    background: #ffd5ff;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -103,11 +103,11 @@ button.delete:hover {
 }
 
 .contact-list li button {
-    background: #e74c3c;
+    background: #9a3ce7;
 }
 
 .contact-list li button:hover {
-    background: #c0392b;
+    background: #b60b91;
 }
 
 ul {
