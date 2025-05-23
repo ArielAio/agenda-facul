@@ -1,51 +1,55 @@
-# Simple Contact Agenda
+# Agenda de Contatos Simples
 
-This project is a simple digital contact agenda built using HTML, CSS, and JavaScript. It allows users to add, search, and delete contacts easily.
+Este é um projeto de agenda de contatos desenvolvido para a disciplina de Gestão Ágil de Projetos (GAPO) da faculdade.
 
-## Project Structure
+## Sobre o Projeto
 
-```
-simple-contact-agenda
-├── css
-│   └── style.css       # Contains styles for the contact agenda
-├── js
-│   └── app.js         # Contains JavaScript functionality for the agenda
-├── index.html         # Main HTML document for the contact agenda
-└── README.md          # Documentation for the project
-```
+Esta é uma simples agenda digital que permite:
+- Inserir contatos (nome e telefone)
+- Buscar contatos pelo nome
+- Deletar contatos existentes
 
-## Features
+Os dados são armazenados localmente no navegador do usuário (localStorage), permitindo que os contatos sejam preservados entre sessões.
 
-- **Add Contact**: Users can add new contacts to the agenda.
-- **Search Contact**: Users can search for existing contacts by name.
-- **Delete Contact**: Users can delete contacts from the agenda.
+## Tecnologias Utilizadas
 
-## Getting Started
+- HTML
+- CSS
+- JavaScript vanilla (sem uso de frameworks)
 
-To set up the project locally, follow these steps:
+## Como Executar
 
-1. Clone the repository:
+1. Clone este repositório:
    ```
-   git clone <repository-url>
+   git clone https://github.com/seu-usuario/simple-contact-agenda.git
    ```
 
-2. Navigate to the project directory:
+2. Navegue até o diretório do projeto:
    ```
    cd simple-contact-agenda
    ```
 
-3. Open `index.html` in your web browser to view the contact agenda.
+3. Abra o arquivo `index.html` no seu navegador preferido.
+   - Você pode simplesmente dar duplo clique no arquivo, ou
+   - Usar o comando: `open index.html` (Mac) ou `start index.html` (Windows)
+   - Alternativamente, você pode usar um servidor local como Live Server do VS Code
 
-## Usage
+## Funcionalidades
 
-- To add a contact, fill in the required fields and click the "Add Contact" button.
-- To search for a contact, enter the name in the search field.
-- To delete a contact, click the "Delete" button next to the contact you wish to remove.
+- **Adicionar Contato**: Preencha o formulário com nome e telefone e clique em "Adicionar".
+- **Buscar Contato**: Digite o nome ou parte do nome no campo de busca para filtrar os contatos.
+- **Excluir Contato**: Clique no botão "Excluir" ao lado de cada contato para removê-lo da agenda.
 
-## Contributing
+## Propósito Educacional
 
-If you would like to contribute to this project, please fork the repository and submit a pull request with your changes. Make sure to follow the project's contribution guidelines.
+Este projeto foi criado como parte da atividade da disciplina de Gestão Ágil de Projetos, com foco principal no aprendizado de gerenciamento de versões usando Git e GitHub. A agenda em si serve como um exemplo prático para aplicar conceitos como:
 
-## License
+- Criação e clonagem de repositórios
+- Criação de branches (ramos)
+- Realização de alterações em código colaborativo
+- Envio de Pull Requests
+- Revisão e gerenciamento de alterações
 
-This project is open-source and available under the [MIT License](LICENSE).
+## Autores
+
+Desenvolvido como atividade acadêmica para a disciplina de Gestão Ágil de Projetos.
